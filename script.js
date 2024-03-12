@@ -27,16 +27,22 @@ document.getElementById('showButton2').onclick = function() {
     document.getElementById('formattedOutput2').value = formattedList;
 };
 
-document.getElementById('copyButton1').addEventListener('click', function() {
-    const copyText = document.getElementById('formattedOutput1');
-    copyText.select();
-    document.execCommand('copy');
-    alert('Copied: ' + copyText.value);
+document.getElementById('copyButton1').addEventListener('click', async () => {
+    const copyText = document.getElementById('formattedOutput1').value;
+    try {
+        await navigator.clipboard.writeText(copyText);
+        alert('Copied: ' + copyText);
+    } catch (err) {
+        console.error('Failed to copy: ', err);
+    }
 });
 
-document.getElementById('copyButton2').addEventListener('click', function() {
-    const copyText = document.getElementById('formattedOutput2');
-    copyText.select();
-    document.execCommand('copy');
-    alert('Copied: ' + copyText.value);
+document.getElementById('copyButton2').addEventListener('click', async () => {
+    const copyText = document.getElementById('formattedOutput2').value;
+    try {
+        await navigator.clipboard.writeText(copyText);
+        alert('Copied: ' + copyText);
+    } catch (err) {
+        console.error('Failed to copy: ', err);
+    }
 });
