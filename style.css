@@ -2,23 +2,65 @@ body {
     background-color: #121212; /* Dark mode background */
     color: white; /* White text color for dark mode */
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-#input1, #input2, #output1, #output2, #output3 {
-    width: 300px;
-    height: 150px;
-    margin-bottom: 20px;
+
+h1 {
+    margin-bottom: 20px; /* Space above the title */
+    color: #4CAF50; /* Greenish tone for contrast */
+}
+
+textarea, input[type="number"], button {
     background-color: #333; /* Lighter dark shade for input and output */
     color: white; /* White text color */
-    border: none;
+    border: 1px solid #555; /* Slightly lighter border for more definition */
     padding: 10px;
+    margin-top: 10px;
 }
-#checkButton {
-    background-color: #4CAF50; /* Green background */
-    color: white; /* White text color */
-    padding: 10px 20px;
-    border: none;
+
+textarea {
+    width: 90%; /* Make text areas take up more space */
+    height: 150px; /* Fixed height for text areas */
+    resize: none; /* Prevent resizing to maintain layout */
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.output-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.output-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%; /* Each output section takes up nearly half the container */
+}
+
+#checkButton, #showButton1, #showButton2, #copyButton1, #copyButton2 {
     cursor: pointer;
+    background-color: #4CAF50; /* Green background */
+    border: none;
+    padding: 10px 20px;
 }
+
 .output-label {
     margin-top: 20px;
+    font-weight: bold;
+}
+
+.formatted-output {
+    height: 70px; /* Adjust based on preference */
+    width: 100%; /* Make sure it fills the container */
 }
