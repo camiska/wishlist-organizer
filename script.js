@@ -12,4 +12,20 @@ document.getElementById('checkButton').onclick = function() {
     document.getElementById('output1').value = duplicates;
     document.getElementById('output2').value = unique1;
     document.getElementById('output3').value = unique2;
+
+    
+};
+
+document.getElementById('showButton1').onclick = function() {
+    const list = document.getElementById('output2').value.trim().split('\n');
+    const count = parseInt(document.getElementById('countInput1').value) || 0;
+    const formattedList = list.slice(0, count).join(' $ ');
+    document.getElementById('formattedOutput1').value = formattedList;
+};
+
+document.getElementById('showButton2').onclick = function() {
+    const list = document.getElementById('output3').value.trim().split('\n');
+    const count = parseInt(document.getElementById('countInput2').value) || 0;
+    const formattedList = list.slice(0, count).join(' $ ');
+    document.getElementById('formattedOutput2').value = formattedList;
 };
