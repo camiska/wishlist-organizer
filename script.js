@@ -1,6 +1,10 @@
 document.getElementById('checkButton').onclick = function() {
-    const list1 = document.getElementById('input1').value.trim().split('\n').map(item => item.split('·')[0].trim());
-    const list2 = document.getElementById('input2').value.trim().split('\n').map(item => item.split('·')[0].trim());
+    const rawList1 = document.getElementById('input1').value.trim().split('\n');
+    const rawList2 = document.getElementById('input2').value.trim().split('\n');
+
+    // Process lists to only keep text before the "·" character, if present
+    const list1 = rawList1.map(item => item.split('·')[0].trim());
+    const list2 = rawList2.map(item => item.split('·')[0].trim());
 
     const set1 = new Set(list1);
     const set2 = new Set(list2);
