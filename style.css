@@ -3,54 +3,56 @@ body {
     color: white; /* White text color for dark mode */
     font-family: Arial, sans-serif;
     margin: 0;
-    padding: 20px;
+    padding: 40px; /* Increased padding for more space */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center; /* Center-align to make elements appear in the middle */
 }
 
 h1 {
-    margin-bottom: 20px; /* Space above the title */
     color: #4CAF50; /* Greenish tone for contrast */
+    margin-bottom: 30px; /* Increased bottom margin for space above input boxes */
+}
+
+.input-container, .output-container, .control-group {
+    width: 100%; /* Ensure full width */
+    display: flex;
+    justify-content: space-around; /* Space out items evenly */
+    margin-bottom: 20px; /* Space between sections */
 }
 
 textarea, input[type="number"], button {
     background-color: #333; /* Lighter dark shade for input and output */
     color: white; /* White text color */
-    border: 1px solid #555; /* Slightly lighter border for more definition */
+    border: 1px solid #555; /* Slightly lighter border for definition */
     padding: 10px;
-    margin-top: 10px;
+    margin-top: 10px; /* Space above inputs and buttons */
 }
 
 textarea {
-    width: 90%; /* Make text areas take up more space */
+    width: 90%; /* Adjust width of text areas */
     height: 150px; /* Fixed height for text areas */
+    margin: 0 auto; /* Center align the textareas */
     resize: none; /* Prevent resizing to maintain layout */
 }
 
-.input-container {
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    margin-bottom: 20px;
-}
-
-.output-container {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
 .output-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 45%; /* Each output section takes up nearly half the container */
+    width: 48%; /* Adjust width to fit side by side */
+}
+
+#output1 {
+    margin-top: 20px; /* Add space above Matching/Duplicate Names box */
+    width: 60%; /* Width of Matching/Duplicate Names box */
+    margin-bottom: 40px; /* More space before next sections */
+}
+
+.formatted-output {
+    height: 70px; /* Adjust height for visibility */
 }
 
 #checkButton, #showButton1, #showButton2, #copyButton1, #copyButton2 {
     cursor: pointer;
-    background-color: #4CAF50; /* Green background */
+    background-color: #4CAF50; /* Green background for buttons */
     border: none;
     padding: 10px 20px;
 }
@@ -58,9 +60,11 @@ textarea {
 .output-label {
     margin-top: 20px;
     font-weight: bold;
+    text-align: center; /* Center text labels */
 }
 
-.formatted-output {
-    height: 70px; /* Adjust based on preference */
-    width: 100%; /* Make sure it fills the container */
+.control-group {
+    display: flex;
+    flex-direction: column; /* Align input and button vertically */
+    align-items: center; /* Center them */
 }
